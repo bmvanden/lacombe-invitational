@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3rd Annual Lacombe Invitational — Disc Golf Tournament</title>
+  <meta name="description" content="The 3rd Annual Lacombe Invitational Disc Golf Tournament. Registration, scoring, and leaderboards coming soon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #2d4a1e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Lato', sans-serif;
+      padding-bottom: 3rem;
+    }
+
+    .hero {
+      width: 100%;
+      background: #3a5c26;
+      border-bottom: 4px solid #c8a84b;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent, transparent 20px,
+        rgba(0,0,0,0.04) 20px, rgba(0,0,0,0.04) 40px
+      );
+    }
+
+    .eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: #c8a84b;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(3rem, 12vw, 5.5rem);
+      color: #f0e0a0;
+      line-height: 0.9;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    .subtitle {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 4vw, 1.6rem);
+      color: #c8a84b;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+      position: relative;
+    }
+
+    .disc {
+      font-size: 2.5rem;
+      margin-top: 0.75rem;
+      position: relative;
+    }
+
+    .date-banner {
+      background: #c8a84b;
+      color: #1a2e0d;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 0.6rem 2rem;
+      margin: 1.5rem auto 0;
+      display: inline-block;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .body {
+      width: 100%;
+      max-width: 680px;
+      padding: 0 1.5rem;
+    }
+
+    .coming-soon {
+      text-align: center;
+      padding: 2.5rem 0 1.5rem;
+      border-bottom: 1px solid rgba(200,168,75,0.3);
+    }
+
+    .cs-label {
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #a8c878;
+      margin-bottom: 1rem;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .unit { text-align: center; }
+
+    .num {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      color: #f0e0a0;
+      line-height: 1;
+      display: block;
+    }
+
+    .unit-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c8a84b;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .sep {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      color: #c8a84b;
+      line-height: 1;
+      align-self: flex-start;
+      padding-top: 0.25rem;
+    }
+
+    .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #a8c878;
+      font-size: 1rem;
+    }
+
+    .sponsor {
+      margin: 2rem 0 0;
+      padding: 1.75rem;
+      background: rgba(200,168,75,0.08);
+      border: 1px solid rgba(200,168,75,0.3);
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .sp-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #c8a84b;
+      margin-bottom: 1rem;
+    }
+
+    .sp-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .sp-name {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      color: #f0e0a0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: left;
+      line-height: 1.1;
+    }
+
+    .sp-sub {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c8a84b;
+    }
+
+    .sp-desc {
+      font-size: 0.85rem;
+      color: #a8c878;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(168,200,120,0.5);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <p class="eyebrow">3rd Annual</p>
+    <h1>Lacombe<br>Invitational</h1>
+    <p class="subtitle">Disc Golf Tournament</p>
+    <div class="disc">🥏</div>
+    <div class="date-banner">Summer 2027 &mdash; Lacombe, AB</div>
+  </div>
+
+  <div class="body">
+    <div class="coming-soon">
+      <p class="cs-label">Site launching soon</p>
+      <div class="countdown">
+        <div class="unit"><span class="num" id="cd-days">--</span><span class="unit-label">Days</span></div>
+        <div class="sep">:</div>
+        <div class="unit"><span class="num" id="cd-hrs">--</span><span class="unit-label">Hours</span></div>
+        <div class="sep">:</div>
+        <div class="unit"><span class="num" id="cd-min">--</span><span class="unit-label">Min</span></div>
+        <div class="sep">:</div>
+        <div class="unit"><span class="num" id="cd-sec">--</span><span class="unit-label">Sec</span></div>
+      </div>
+      <p class="tagline">Registration, scoring, and leaderboards &mdash; coming soon.</p>
+    </div>
+
+    <div class="sponsor">
+      <p class="sp-label">Proudly Sponsored By</p>
+      <div class="sp-logo">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="56" height="56" rx="4" fill="rgba(200,168,75,0.15)"/>
+          <path d="M28 10 L38 20 L38 28 L28 22 L18 28 L18 20 Z" fill="#c8a84b"/>
+          <rect x="20" y="28" width="16" height="14" rx="1" fill="#c8a84b" opacity="0.7"/>
+          <rect x="24" y="34" width="8" height="8" rx="1" fill="#2d4a1e"/>
+          <path d="M10 32 L18 24 M38 24 L46 32" stroke="#a8c878" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M14 36 L10 32 M42 36 L46 32" stroke="#a8c878" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="28" cy="8" r="3" fill="#a8c878"/>
+        </svg>
+        <div>
+          <div class="sp-name">Ryan Pitz<br>Contracting</div>
+          <div class="sp-sub">Ltd.</div>
+        </div>
+      </div>
+      <p class="sp-desc">Building strong foundations — on the job site and on the fairway.<br>Proud title sponsor of the Lacombe Invitational.</p>
+    </div>
+
+    <p class="footer">lacombeinvitational.ca</p>
+  </div>
+
+  <script>
+    const eventDate = new Date('2027-05-29T08:00:00');
+    function tick() {
+      const now = new Date();
+      const diff = eventDate - now;
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '0';
+        document.getElementById('cd-hrs').textContent = '00';
+        document.getElementById('cd-min').textContent = '00';
+        document.getElementById('cd-sec').textContent = '00';
+        return;
+      }
+      const days = Math.floor(diff / 86400000);
+      const hrs = Math.floor((diff % 86400000) / 3600000);
+      const min = Math.floor((diff % 3600000) / 60000);
+      const sec = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-days').textContent = days;
+      document.getElementById('cd-hrs').textContent = String(hrs).padStart(2, '0');
+      document.getElementById('cd-min').textContent = String(min).padStart(2, '0');
+      document.getElementById('cd-sec').textContent = String(sec).padStart(2, '0');
+    }
+    tick();
+    setInterval(tick, 1000);
+  </script>
+
+</body>
+</html>
