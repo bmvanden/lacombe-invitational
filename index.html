@@ -7,24 +7,33 @@
   <meta name="description" content="The 3rd Annual Lacombe Invitational Disc Golf Tournament. Registration, scoring, and leaderboards coming soon." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root{
+      --green-dark: #183b22; /* logo-matching deep green */
+      --green-mid: #2f6b36;
+      --green-light: #85b77a;
+      --gold: #c8a84b;
+      --cream: #f6f1e6;
+    }
+
     body {
-      background: #2d4a1e;
+      background: var(--cream);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       font-family: 'Lato', sans-serif;
       padding-bottom: 3rem;
+      color: var(--green-dark);
     }
 
     .hero {
       width: 100%;
-      background: #3a5c26;
-      border-bottom: 4px solid #c8a84b;
+      background: linear-gradient(180deg, rgba(40,70,36,0.06), rgba(0,0,0,0));
+      border-bottom: 4px solid var(--gold);
       padding: 2.5rem 1.5rem 2rem;
       text-align: center;
       position: relative;
@@ -47,29 +56,29 @@
       font-weight: 700;
       font-size: 13px;
       letter-spacing: 4px;
-      color: #c8a84b;
+      color: var(--gold);
       text-transform: uppercase;
       margin-bottom: 0.5rem;
       position: relative;
     }
 
     h1 {
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Cinzel', serif;
       font-weight: 700;
       font-size: clamp(3rem, 12vw, 5.5rem);
-      color: #f0e0a0;
+      color: var(--green-dark);
       line-height: 0.9;
       text-transform: uppercase;
       letter-spacing: -1px;
-      text-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+      text-shadow: 4px 4px 0 rgba(0,0,0,0.12);
       position: relative;
     }
 
     .subtitle {
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-weight: 700;
       font-size: clamp(1rem, 4vw, 1.6rem);
-      color: #c8a84b;
+      color: var(--green-mid);
       letter-spacing: 6px;
       text-transform: uppercase;
       margin-top: 0.5rem;
@@ -83,9 +92,9 @@
     }
 
     .date-banner {
-      background: #c8a84b;
-      color: #1a2e0d;
-      font-family: 'Oswald', sans-serif;
+      background: var(--gold);
+      color: var(--green-dark);
+      font-family: 'Cinzel', serif;
       font-weight: 700;
       font-size: clamp(1rem, 3vw, 1.4rem);
       letter-spacing: 3px;
@@ -131,7 +140,7 @@
       font-family: 'Oswald', sans-serif;
       font-weight: 700;
       font-size: clamp(2.5rem, 8vw, 4rem);
-      color: #f0e0a0;
+      color: #c8a84b;
       line-height: 1;
       display: block;
     }
@@ -158,16 +167,16 @@
     .tagline {
       font-family: 'Playfair Display', serif;
       font-style: italic;
-      color: #a8c878;
+      color: var(--green-mid);
       font-size: 1rem;
     }
 
     .sponsor {
       margin: 2rem 0 0;
       padding: 1.75rem;
-      background: rgba(200,168,75,0.08);
-      border: 1px solid rgba(200,168,75,0.3);
-      border-radius: 4px;
+      background: rgba(40,70,36,0.03);
+      border: 1px solid rgba(24,59,34,0.06);
+      border-radius: 6px;
       text-align: center;
     }
 
@@ -188,15 +197,22 @@
       margin-bottom: 0.75rem;
     }
 
+    .sp-logo img{
+      max-width: 260px;
+      height: auto;
+      display: block;
+      filter: none;
+    }
+
     .sp-name {
-      font-family: 'Oswald', sans-serif;
+      font-family: 'Cinzel', serif;
       font-weight: 700;
-      font-size: clamp(1.4rem, 5vw, 2rem);
-      color: #f0e0a0;
+      font-size: clamp(1.1rem, 3.6vw, 1.6rem);
+      color: var(--green-dark);
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       text-align: left;
-      line-height: 1.1;
+      line-height: 1.05;
     }
 
     .sp-sub {
@@ -204,12 +220,12 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #c8a84b;
+      color: var(--gold);
     }
 
     .sp-desc {
-      font-size: 0.85rem;
-      color: #a8c878;
+      font-size: 0.95rem;
+      color: var(--green-mid);
       line-height: 1.6;
     }
 
@@ -217,7 +233,7 @@
       margin-top: 2rem;
       text-align: center;
       font-size: 0.8rem;
-      color: rgba(168,200,120,0.5);
+      color: rgba(24,59,34,0.45);
       letter-spacing: 2px;
       text-transform: uppercase;
     }
@@ -249,21 +265,10 @@
     </div>
 
     <div class="sponsor">
-      <p class="sp-label">Proudly Sponsored By</p>
+      <p class="sp-label">Brought to you by</p>
       <div class="sp-logo">
-        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="56" height="56" rx="4" fill="rgba(200,168,75,0.15)"/>
-          <path d="M28 10 L38 20 L38 28 L28 22 L18 28 L18 20 Z" fill="#c8a84b"/>
-          <rect x="20" y="28" width="16" height="14" rx="1" fill="#c8a84b" opacity="0.7"/>
-          <rect x="24" y="34" width="8" height="8" rx="1" fill="#2d4a1e"/>
-          <path d="M10 32 L18 24 M38 24 L46 32" stroke="#a8c878" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M14 36 L10 32 M42 36 L46 32" stroke="#a8c878" stroke-width="1.5" stroke-linecap="round"/>
-          <circle cx="28" cy="8" r="3" fill="#a8c878"/>
-        </svg>
-        <div>
-          <div class="sp-name">Ryan Pitz<br>Contracting</div>
-          <div class="sp-sub">Ltd.</div>
-        </div>
+        <!-- Inline SVG/PNG logo. Using the bundled SVG for crisp scaling. -->
+        <img src="images/IMG_6265.PNG" alt="Ryan Pitz Contracting Ltd. logo" />
       </div>
       <p class="sp-desc">Building strong foundations — on the job site and on the fairway.<br>Proud title sponsor of the Lacombe Invitational.</p>
     </div>
