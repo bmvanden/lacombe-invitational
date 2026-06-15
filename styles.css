@@ -89,7 +89,7 @@ h1 {
   line-height: 0.9;
   text-transform: uppercase;
   letter-spacing: 0;
-  text-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
   position: relative;
 }
 
@@ -101,7 +101,7 @@ h2 {
   line-height: 0.9;
   text-transform: uppercase;
   letter-spacing: -0.03em;
-  text-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
   position: relative;
 }
 
@@ -117,9 +117,9 @@ h2 {
 .subtitle {
   font-family: 'Lato', serif;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: clamp(0.7rem, 3.4vw, 1.25rem);
   color: var(--green-dark);
-  letter-spacing: 6px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
   background: var(--cream);
@@ -133,7 +133,7 @@ h2 {
   color: var(--green-dark);
   font-family: 'Lato', serif;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: clamp(0.7rem, 3.4vw, 1.25rem);
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
