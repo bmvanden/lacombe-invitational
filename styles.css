@@ -10,11 +10,6 @@
 
 body {
   background: var(--cream);
-  background-image: url('images/disc-golf-2-1024x1024.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +21,18 @@ body {
 }
 
 body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('images/disc-golf-2-1024x1024.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: -2;
+}
+
+body::after {
   content: '';
   position: fixed;
   inset: 0;
