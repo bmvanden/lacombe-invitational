@@ -66,7 +66,7 @@ body::after {
 }
 
 .hero-content {
-  font-size: clamp(1rem, 4vw, 1.75rem);
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
   position: relative;
 }
 
@@ -117,7 +117,7 @@ h2 {
 .subtitle {
   font-family: 'Lato', serif;
   font-weight: 700;
-  font-size: clamp(0.7rem, 3.4vw, 1.25rem);
+  font-size: clamp(0.7rem, calc(4.4vw - 0.675rem), 1.25rem);
   color: var(--green-dark);
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -133,7 +133,7 @@ h2 {
   color: var(--green-dark);
   font-family: 'Lato', serif;
   font-weight: 700;
-  font-size: clamp(0.7rem, 3.4vw, 1.25rem);
+  font-size: clamp(0.7rem, calc(4.4vw - 0.675rem), 1.25rem);
   letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
